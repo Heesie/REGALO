@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Look — REGALO</title>
+  <meta name="description" content="Shop the look: every piece from the REGALO lookbook, ready to add to your bag.">
+  <meta name="theme-color" content="#211a17">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@300;400;500&family=Tenor+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=24">
+  <script src="js/i18n.js?v=15"></script>
+</head>
+<body>
+  <script src="js/layout.js?v=12"></script>
+  <script>Regalo.header({ active: 'home', tone: 'light' })</script>
+
+  <!-- Template page: content comes from Regalo.looks in js/data.js (look.html?id=look-01) -->
+  <main id="main">
+    <section class="look-page" data-look-page>
+      <nav class="breadcrumb" aria-label="Breadcrumb" data-reveal>
+        <a href="index.html#lookbook">Lookbook</a><span>/</span>
+        <span aria-current="page" data-look-label>Look 01</span>
+      </nav>
+
+      <div class="look">
+        <div class="look__media">
+          <div class="look__frame media-reveal" data-look-frame>
+            <img data-look-img src="assets/img/look-01.jpg" alt="">
+          </div>
+        </div>
+
+        <div class="look__info" data-look-info data-lenis-prevent>
+          <p class="eyebrow" data-look-label data-reveal>Look 01</p>
+          <h1 class="h1" data-look-title data-reveal></h1>
+          <p class="body secondary" data-look-desc data-reveal></p>
+          <p class="eyebrow secondary look__count" data-reveal><span data-look-count>3</span> <span>pieces in this look</span></p>
+
+          <ol class="look-items" data-look-items></ol>
+
+          <div class="look__total" data-reveal>
+            <div class="look__total-row"><span class="body-s">Total for the look</span><span class="price" data-look-total>€ 0,00</span></div>
+            <button type="button" class="btn btn--primary btn--block" data-look-add-all><span>Add the full look</span></button>
+            <p class="caption muted">Choose a size for each piece, or add pieces one by one.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="look-more">
+      <div class="look-more__head">
+        <h2 class="h2" data-reveal>More looks</h2>
+        <div class="look-more__nav" data-reveal>
+          <a class="round-btn" data-look-prev aria-label="Previous look">←</a>
+          <a class="round-btn" data-look-next aria-label="Next look">→</a>
+        </div>
+      </div>
+      <div class="look-more__grid" data-look-more></div>
+    </section>
+  </main>
+
+  <script>Regalo.footer()</script>
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="js/data.js?v=11"></script>
+  <script src="js/main.js?v=24"></script>
+</body>
+</html>

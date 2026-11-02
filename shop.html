@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>The Collection · Coming soon — REGALO</title>
+  <meta name="description" content="Signature pieces in natural fabrics and modern silhouettes. The first REGALO collection is coming soon.">
+  <meta name="theme-color" content="#9c4a36">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@300;400;500&family=Tenor+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=24">
+  <script src="js/i18n.js?v=15"></script>
+</head>
+<body>
+  <script src="js/layout.js?v=12"></script>
+  <script>Regalo.header({ active: 'shop' })</script>
+
+  <main id="main">
+    <section class="shop-hero" aria-label="The Collection">
+      <div class="shop-hero__text">
+        <p class="eyebrow champagne" data-reveal>House of Regalo</p>
+        <h1 class="display-xl"><span class="split-line"><span>The Collection</span></span></h1>
+        <p class="body-l" data-reveal style="--d:.15s">Signature pieces in natural fabrics and modern silhouettes, designed to remain relevant for years to come. The first collection is coming soon.</p>
+        <a class="link link--light" href="#join" data-reveal style="--d:.25s"><span>Join the list</span><i aria-hidden="true">→</i></a>
+      </div>
+      <div class="shop-hero__media passe" data-reveal style="--d:.1s">
+        <div class="frame media-reveal" style="--d:.3s"><img src="assets/img/hero-shop.webp" alt="Man in a linen jacket and white trousers sitting on a wooden sailing boat" style="object-position:55% 40%"></div>
+      </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="container" style="padding-block:var(--section-y-sm)">
+      <div class="section-head">
+        <div class="section-head__text">
+          <h2 class="h1" data-reveal>Where the collection begins</h2>
+        </div>
+        <span class="tag tag--static" data-reveal style="color:var(--color-text-secondary)">Coming soon</span>
+      </div>
+      <div class="category-grid" data-queued-reveal-group data-queued-reveal-children>
+        <a class="category-tile" href="#join">
+          <div class="category-tile__media"><img src="assets/img/cat-tops.jpg" alt="A plain white T-shirt on a wooden hanger" loading="lazy"><div class="category-tile__overlay"></div>
+            <p class="eyebrow category-tile__state"><span>Coming soon</span><span>Join the list →</span></p></div>
+          <div class="category-tile__row"><h3 class="h4">Signature Tops</h3><i aria-hidden="true">→</i></div>
+          <p class="caption muted">Crew-neck T-shirts and tank tops</p>
+        </a>
+        <a class="category-tile" href="#join">
+          <div class="category-tile__media"><img src="assets/img/cat-knit.jpg" alt="Man in a soft grey cardigan among trees" loading="lazy"><div class="category-tile__overlay"></div>
+            <p class="eyebrow category-tile__state"><span>Coming soon</span><span>Join the list →</span></p></div>
+          <div class="category-tile__row"><h3 class="h4">Fine Knitwear</h3><i aria-hidden="true">→</i></div>
+          <p class="caption muted">Cardigans and knitwear</p>
+        </a>
+        <a class="category-tile" href="#join">
+          <div class="category-tile__media"><img src="assets/img/cat-trousers.jpg" alt="Man in tailored trousers standing in a doorway" loading="lazy"><div class="category-tile__overlay"></div>
+            <p class="eyebrow category-tile__state"><span>Coming soon</span><span>Join the list →</span></p></div>
+          <div class="category-tile__row"><h3 class="h4">Tailored Trousers</h3><i aria-hidden="true">→</i></div>
+          <p class="caption muted">Pleated trousers, tailored fit</p>
+        </a>
+      </div>
+      <p class="body-s muted" data-reveal style="margin-top:48px;max-width:600px">More categories follow as the collection grows: Contemporary Trousers, Leisurewear and Accessories.</p>
+    </section>
+
+    <!-- Philosophy -->
+    <section class="philosophy">
+      <h2 class="display-l" data-reveal>Every collection should remain relevant for the next twenty years.</h2>
+      <p class="body-l secondary" data-reveal style="--d:.15s">Natural fabrics, considered weights and careful finishing. Each piece comes with a short story about its material and craft.</p>
+    </section>
+
+    <!-- First look -->
+    <section class="container" style="padding-block:var(--section-y-sm)">
+      <div class="section-head" style="margin-bottom:48px">
+        <div class="section-head__text">
+          <h2 class="h1" data-reveal>The first pieces</h2>
+        </div>
+        <a class="link" href="#join" data-reveal><span>Join the list</span><i aria-hidden="true">→</i></a>
+      </div>
+      <p class="caption muted" data-reveal style="margin:-24px 0 48px">9 pieces arriving with the first collection</p>
+      <div class="card-grid" data-first-look data-queued-reveal-group data-queued-reveal-children></div>
+    </section>
+
+    <!-- Join -->
+    <section class="join" id="join" data-join aria-label="Join the list" style="padding-block:140px">
+      <h2 class="display-l join__title"><span class="split-line"><span>Be the first to discover REGALO.</span></span></h2>
+      <form class="join__form" novalidate data-reveal style="--d:.15s">
+        <div class="join__row">
+          <div class="field">
+            <label class="field__label" for="join-email">Email address</label>
+            <div class="field__control"><input id="join-email" type="email" name="email" placeholder="your@email.com" autocomplete="email" required></div>
+            <p class="field__help">We respect your inbox. Unsubscribe anytime.</p>
+          </div>
+          <button type="submit" class="btn btn--primary"><span>Join the list</span></button>
+        </div>
+        <div class="join__checks">
+          <label class="check"><input type="checkbox" checked><span class="check__box"><svg viewBox="0 0 20 20"><path d="M5 9.75L8.5 13.25L15 6.75"/></svg></span><span class="check__text"><span class="body">Collection &amp; launch announcements</span><span class="body-s muted">News about the first launch and future collections.</span></span></label>
+          <label class="check"><input type="checkbox" checked><span class="check__box"><svg viewBox="0 0 20 20"><path d="M5 9.75L8.5 13.25L15 6.75"/></svg></span><span class="check__text"><span class="body">Inside Regalo</span><span class="body-s muted">Stories, inspiration and updates on the brand.</span></span></label>
+        </div>
+      </form>
+      <div class="join__success" role="status">
+        <p class="h3">Thank you — you're on the list.</p>
+        <p class="body secondary">We'll write when the first collection opens.</p>
+      </div>
+    </section>
+  </main>
+
+  <script>Regalo.footer()</script>
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="js/data.js?v=11"></script>
+  <script src="js/main.js?v=24"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/ScrollTrigger.min.js"></script>
+  <script src="js/queued-reveal.js?v=11"></script>
+</body>
+</html>

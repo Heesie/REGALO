@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Checkout — REGALO</title>
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#211a17">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@300;400;500&family=Tenor+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=24">
+  <script src="js/i18n.js?v=15"></script>
+</head>
+<body>
+  <script src="js/layout.js?v=12"></script>
+  <script>Regalo.checkoutHeader()</script>
+
+  <main id="main" class="checkout" data-checkout>
+    <form class="checkout__form" novalidate>
+      <a class="link link--back" href="collection.html" data-reveal><span>Back to bag</span><i aria-hidden="true">←</i></a>
+      <h1 class="h1" data-reveal>Checkout</h1>
+
+      <fieldset class="checkout__step" style="border:0;padding:0;margin:0" data-reveal>
+        <legend class="step-title" style="margin-bottom:24px"><span class="eyebrow">01</span><span class="h3">Contact</span></legend>
+        <div class="field">
+          <label class="field__label" for="email">Email address</label>
+          <div class="field__control"><input id="email" type="email" placeholder="your@email.com" autocomplete="email" required></div>
+          <p class="field__help">We send your order confirmation here.</p>
+        </div>
+        <label class="check"><input type="checkbox"><span class="check__box"><svg viewBox="0 0 20 20"><path d="M5 9.75L8.5 13.25L15 6.75"/></svg></span><span class="check__text"><span class="body">Keep me updated on new collections</span><span class="body-s muted">Collection &amp; launch announcements</span></span></label>
+      </fieldset>
+
+      <fieldset class="checkout__step" style="border:0;padding:0;margin:0" data-reveal>
+        <legend class="step-title" style="margin-bottom:24px"><span class="eyebrow">02</span><span class="h3">Delivery address</span></legend>
+        <div class="field-row">
+          <div class="field"><label class="field__label" for="fname">First name</label><div class="field__control"><input id="fname" placeholder="Jan" autocomplete="given-name" required></div><p class="field__help"></p></div>
+          <div class="field"><label class="field__label" for="lname">Last name</label><div class="field__control"><input id="lname" placeholder="de Vries" autocomplete="family-name" required></div><p class="field__help"></p></div>
+        </div>
+        <div class="field"><label class="field__label" for="address">Address</label><div class="field__control"><input id="address" placeholder="Keizersgracht 100" autocomplete="street-address" required></div><p class="field__help"></p></div>
+        <div class="field-row">
+          <div class="field"><label class="field__label" for="postal">Postal code</label><div class="field__control"><input id="postal" placeholder="1015 CJ" autocomplete="postal-code" required></div><p class="field__help"></p></div>
+          <div class="field"><label class="field__label" for="city">City</label><div class="field__control"><input id="city" placeholder="Amsterdam" autocomplete="address-level2" required></div><p class="field__help"></p></div>
+        </div>
+        <div class="field-row">
+          <div class="field"><label class="field__label" for="country">Country</label><div class="field__control">
+            <select id="country" autocomplete="country-name">
+              <option>Netherlands</option><option>Belgium</option><option>Germany</option><option>France</option><option>Italy</option><option>Spain</option>
+            </select></div><p class="field__help"></p></div>
+          <div class="field"><label class="field__label" for="phone">Phone (optional)</label><div class="field__control"><input id="phone" type="tel" placeholder="+31 6 12345678" autocomplete="tel"></div><p class="field__help"></p></div>
+        </div>
+      </fieldset>
+
+      <fieldset class="checkout__step" style="border:0;padding:0;margin:0" data-reveal>
+        <legend class="step-title" style="margin-bottom:24px"><span class="eyebrow">03</span><span class="h3">Delivery</span></legend>
+        <div class="radio-list">
+          <label class="radio"><input type="radio" name="delivery" checked><span class="radio__dot"></span><span class="radio__text"><span class="body">Standard delivery</span><span class="body-s muted">2 to 4 working days, with tracking</span></span><span class="price secondary">To be confirmed</span></label>
+          <label class="radio"><input type="radio" name="delivery"><span class="radio__dot"></span><span class="radio__text"><span class="body">Express delivery</span><span class="body-s muted">1 to 2 working days, signature on delivery</span></span><span class="price secondary">To be confirmed</span></label>
+        </div>
+      </fieldset>
+
+      <fieldset class="checkout__step" style="border:0;padding:0;margin:0" data-reveal>
+        <legend class="step-title" style="margin-bottom:24px"><span class="eyebrow">04</span><span class="h3">Payment</span></legend>
+        <div class="radio-list">
+          <label class="radio"><input type="radio" name="payment" checked><span class="radio__dot"></span><span class="radio__text"><span class="body">iDEAL</span><span class="body-s muted">Pay directly via your bank</span></span></label>
+          <label class="radio"><input type="radio" name="payment"><span class="radio__dot"></span><span class="radio__text"><span class="body">Card</span><span class="body-s muted">Visa, Mastercard, American Express</span></span></label>
+          <label class="radio"><input type="radio" name="payment"><span class="radio__dot"></span><span class="radio__text"><span class="body">PayPal</span><span class="body-s muted">Pay with your PayPal account</span></span></label>
+          <label class="radio"><input type="radio" name="payment"><span class="radio__dot"></span><span class="radio__text"><span class="body">Bancontact</span><span class="body-s muted">For payments from Belgium</span></span></label>
+        </div>
+        <p class="caption muted">Payment methods per country are confirmed with the payment provider before launch.</p>
+      </fieldset>
+
+      <div style="display:grid;gap:24px" data-reveal>
+        <button type="submit" class="btn btn--primary btn--block"><span>Place order</span></button>
+        <p class="caption muted">By placing your order you agree to the terms and the returns policy.</p>
+      </div>
+    </form>
+
+    <aside class="summary" aria-label="Order summary" data-reveal style="--d:.1s">
+      <div class="summary__row"><p class="h3">Order summary</p><p class="caption muted"><span data-sum-count>0</span> items</p></div>
+      <div class="summary__rule"></div>
+      <div class="summary__items" data-summary-items></div>
+      <div class="summary__rule"></div>
+      <div class="summary__row"><span class="body-s">Subtotal</span><span class="price" data-sum-subtotal>€ 0,00</span></div>
+      <div class="summary__row"><span class="body-s">Shipping</span><span class="price">To be confirmed</span></div>
+      <div class="summary__rule"></div>
+      <div class="summary__row h4"><span>Total</span><span data-sum-total>€ 0,00</span></div>
+      <p class="caption muted">Incl. VAT</p>
+    </aside>
+  </main>
+
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="js/data.js?v=11"></script>
+  <script src="js/main.js?v=24"></script>
+</body>
+</html>
